@@ -1,0 +1,36 @@
+.eth-card {
+  width: 100%;
+  background-color: #23262f;
+  border-radius: 25px;
+  max-width: 350px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.light .eth-card {
+  background-color: aliceblue;
+  color: black;
+}
+
+.eth-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: white;
+}
+.price-icon {
+  width: 30px;
+  height: 30px;
+}
+.view-icon {
+  width: 23px;
+  height: 17px;
+}
+@media (max-width: 500px) {
+  .nft-font-32 {
+    font-size: 25px;
+  }
+}

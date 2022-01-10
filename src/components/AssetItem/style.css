@@ -1,0 +1,12 @@
+.item-video {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  padding-bottom:100%; 
+}

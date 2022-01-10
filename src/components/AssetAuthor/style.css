@@ -1,0 +1,103 @@
+.asset__authors {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #222227;
+}
+.asset__authors--tab {
+  padding-top: 0;
+  border-top: none;
+}
+.asset__authors li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 50%;
+}
+.asset__authors li span {
+  font-size: 13px;
+  color: #bdbdbd;
+  margin-bottom: 12px;
+  line-height: 100%;
+}
+.asset__authors li p {
+  font-size: 14px;
+  line-height: 100%;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.asset__authors li:last-child {
+  margin-bottom: 0;
+}
+.asset__author {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.asset__author--verified:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  bottom: -2px;
+  left: 28px;
+  border-radius: 50%;
+  background: url("../../assets/img/verified.svg") no-repeat center #2f80ed;
+  background-size: 14px auto;
+  z-index: 1;
+  pointer-events: none;
+}
+.asset__author img {
+  display: block;
+  overflow: hidden;
+  width: 44px !important;
+  height: 44px;
+  border-radius: 10px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.asset__author a {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #bdbdbd;
+  font-size: 16px;
+}
+.asset__author a:hover {
+  color: #3772ff;
+}
+@media (min-width: 576px) {
+  .asset__authors {
+    flex-direction: row;
+  }
+  .asset__authors li {
+    margin-bottom: 0;
+    margin-right: 60px;
+  }
+  .asset__authors li:last-child {
+    margin-right: 0;
+  }
+  .asset__authors--tab {
+    flex-direction: column;
+  }
+  .asset__authors--tab li {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .asset__authors--tab li:last-child {
+    margin-bottom: 0;
+  }
+}

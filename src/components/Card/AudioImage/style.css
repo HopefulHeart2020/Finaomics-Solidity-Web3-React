@@ -1,0 +1,38 @@
+.flex {
+  display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.items-center{
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.audio-btn {
+  width: 3em!important;
+}
+.wave {
+  height: 3em;
+  display: flex;
+  align-items: center;
+}
+.relative{
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.overflow-hidden {
+    overflow: hidden!important;
+}
+.bottom-8 {
+  bottom: 15px;
+}

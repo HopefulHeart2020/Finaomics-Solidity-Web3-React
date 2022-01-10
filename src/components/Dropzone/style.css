@@ -1,0 +1,11 @@
+.icon-set{
+  width: 60px;
+  height:60px;
+  color: grey;
+}
+.text-set{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}

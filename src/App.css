@@ -1,0 +1,941 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Inter:wght@400;500&display=swap");
+/*==============================
+	Common styles
+==============================*/
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.App {
+  overflow-x: hidden;
+}
+html,
+body {
+  height: 100%;
+  font-family: Montserrat;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: #16151a;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: 0.5s ease;
+  transition-property: color, background-color, border-color, box-shadow;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+a {
+  transition: 0.5s ease;
+  transition-property: color, background-color, border-color, box-shadow;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+input,
+textarea,
+select {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  transition: 0.5s ease;
+  transition-property: color, border-color, box-shadow;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+select::-ms-expand {
+  display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+::-moz-selection {
+  background: #fff;
+  color: #222227;
+  text-shadow: none;
+}
+::selection {
+  background: #fff;
+  color: #222227;
+  text-shadow: none;
+}
+::-webkit-input-placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+}
+:-moz-placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+}
+:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.height-sm {
+  height: 40px !important;
+}
+/* body::-webkit-scrollbar {
+  width: 16px;
+}
+body::-webkit-scrollbar-track {
+  background: #222227;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  outline: 1px solid #222227;
+} */
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border: 0px solid #333;
+  border-radius: 50px;
+  filter: none;
+  transition: background-color 0.25s, filter 0.25s;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.hide-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  transition: background-color 0.25s, filter 0.25s;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-button {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border: 0px solid #333;
+  border-radius: 50px;
+  filter: none;
+  transition: background-color 0.25s, filter 0.25s;
+}
+::-webkit-scrollbar-thumb:active {
+  filter: brightness(80%);
+}
+::-webkit-scrollbar-track {
+  background: #333;
+  border: 0px none #333;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #333;
+}
+::-webkit-scrollbar-track:active {
+  background: #333;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.tab-content {
+  width: 100%;
+}
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
+}
+.fade {
+  transition: opacity 0.4s linear;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: none;
+  }
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+.collapse:not(.show) {
+  display: none;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+:focus-visible {
+  outline: 0px dotted;
+}
+.row--grid {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.row--grid .col-6,
+.row--grid .col-12 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .row--grid {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .row--grid .col-6,
+  .row--grid .col-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.row--sidebar {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.row--sidebar .col-6,
+.row--sidebar .col-12 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.owl-carousel .owl-item {
+  -webkit-transform: none;
+}
+.nft-font-18 {
+  font: normal normal normal 18px/22px Montserrat;
+}
+.nft-text-center {
+  text-align: center;
+}
+.nft-font-36 {
+  font: normal normal 900 36px/44px Montserrat;
+}
+.nft-mt-60 {
+  margin-top: 60px;
+}
+.nft-pt-60 {
+  padding-top: 60px;
+}
+.nft-font-22 {
+  font-size: 22px;
+}
+.nft-color-grey {
+  color: #767d8f;
+}
+.nft-text-center {
+  text-align: center;
+}
+.nft-font-60 {
+  font: normal normal 900 50px/73px Montserrat;
+}
+.nft-font-32 {
+  font: normal normal 900 32px/39px Montserrat;
+}
+.nft-font-18 {
+  font: normal normal normal 18px/22px Montserrat;
+}
+.nft-color-white {
+  color: #fff;
+}
+.nft-mw-350 {
+  max-width: 350px;
+}
+.nft-mt-100 {
+  margin-top: 100px;
+}
+.nft-border-bottom {
+  border-bottom: 2px grey solid;
+}
+.nft-font-20 {
+  font-size: 20px;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1450px;
+  }
+}
+@media (max-width: 500px) {
+  .nft-font-60 {
+    font-size: 40px;
+  }
+  .nft-font-36 {
+    font-size: 25px;
+  }
+}
+.text-white {
+  color: white;
+}
+
+.light .text-white {
+  color: black;
+}
+
+.light .explore-btn {
+  color: white;
+}
+
+.text-warning {
+  color: #c7114d;
+}
+
+body {
+  background: #0f0f0f !important;
+}
+
+.hero {
+  background-image: url("assets/img/cover/bg_hero_v3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+  margin-top: 0 !important;
+  min-height: 70vh;
+  display: flex;
+}
+
+.header {
+  background: #0f0f0f !important;
+  border-bottom: 0px !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+
+.footer {
+  background: #0f0f0f !important;
+  /* -webkit-box-shadow: 0px -3px 14px 4px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px -3px 14px 4px rgba(0, 0, 0, 0.39); */
+  border-top: 1px rgba(255, 255, 255, 0.1) solid !important;
+}
+
+.header__content {
+  filter: blur(0px) !important;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mtb-10 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.header__action-btn {
+  fill: white;
+}
+
+.header__action-btn:hover {
+  fill: #d9d9d9;
+}
+
+.header__action-btn:active {
+  fill: #d9d9d9;
+}
+
+.headerLine2 {
+  background: #1a1a1a;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__icon {
+  width: 200px;
+}
+
+.header__nav-link {
+  color: #5e5e5e;
+}
+
+.nftCard {
+  border-radius: 10px;
+  background: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.featuredNFTs {
+  min-height: 90vh;
+  padding-top: 30px;
+}
+
+.nft-mb-100 {
+  margin-bottom: 100px;
+}
+
+.nftCardImageWrapper {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-left: auto;
+  flex: 1;
+}
+
+.nftCardImage {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-top: -23px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nftCardPillCurrencyImage {
+  width: 25px;
+  height: 25px;
+}
+
+.nftCardContent {
+  padding: 20px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.nftCardCollection {
+  text-decoration: underline;
+  color: #f0b90b;
+}
+
+.roundedHeaderButton {
+  background: #d5d4d0;
+  color: #222222;
+  border-radius: 50px;
+  padding: 2px 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  width: 80px;
+}
+
+.roundedHeaderButtonOutlined {
+  background: transparent;
+  border: 1px solid #d5d4d0;
+  color: #d5d4d0;
+  border-radius: 50px;
+  padding: 2px 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  width: 80px;
+}
+
+.explore-btn:hover {
+  background: #d5d4d0 !important;
+  color: #222222 !important;
+}
+
+.header__nav-link:hover {
+  color: #f0b90b !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer__tagline {
+  margin-top: 50px !important;
+}
+
+.author__meta {
+  background: #1a1a1a !important;
+  border: none !important;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.author__name a:hover {
+  color: #f0b90b !important;
+}
+
+.author__nickname {
+  color: #f0b90b !important;
+}
+
+.author__code button svg {
+  fill: #f0b90b !important;
+}
+
+.author__link svg {
+  fill: #f0b90b !important;
+}
+
+.main__title--create {
+  margin-top: 70px !important;
+}
+
+.linkTerms {
+  color: #f0b90b !important;
+}
+
+.cardGreyShadow {
+  background: #1a1a1a !important;
+  border: none !important;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  padding-bottom: 30px !important;
+}
+
+.inputBg {
+  background: #282828 !important;
+}
+
+.author__follow {
+  background: #282828 !important;
+}
+
+.sign__label {
+  padding-left: 5px !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+.sign__select {
+  background: url("assets/img/down-arrow.png") no-repeat center right 20px !important;
+  background-color: #282828 !important;
+}
+
+.explore__select {
+  background: url("assets/img/down-arrow.png") no-repeat center right 20px !important;
+  background-color: #282828 !important;
+  font-size: 14px !important;
+}
+
+.sign__input {
+  background-color: #282828 !important;
+  margin-top: 10px !important;
+}
+
+.nftdropzone {
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+  margin-top: 10px !important;
+}
+
+.fileUploadLabel {
+  font-size: 14px;
+  font-family: Open Sans, sans-serif;
+}
+
+.filter__checkboxes input:not(:checked) + label,
+.filter__checkboxes input:checked + label {
+  padding-left: 30px !important;
+}
+
+.filter__checkboxes input:not(:checked) + label:before,
+.filter__checkboxes input:checked + label:before {
+  background: #282828 !important;
+}
+
+.filter__checkboxes input:not(:checked) + label:after,
+.filter__checkboxes input:checked + label:after {
+  background-color: #f0b90b !important;
+}
+
+.example-track {
+  background-color: #282828 !important;
+}
+
+.example-thumb {
+  border: 5px solid #f0b90b !important;
+}
+
+.sign__textarea {
+  background-color: #282828 !important;
+  margin-top: 10px;
+}
+
+.sign__textarea::placeholder {
+  font-size: 14px !important;
+  font-family: Open Sans, sans-serif;
+}
+
+.sign__btn {
+  background: #d5d4d0 !important;
+  color: #222222 !important;
+}
+
+.profile {
+  background: #1a1a1a !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 0px !important;
+}
+
+.profile__tabs a:before {
+  background-color: #f0b90b !important;
+}
+
+.asset__tabs a {
+  height: 50px !important;
+}
+
+.search-outline {
+  background: #1a1a1a !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 0px !important;
+}
+
+.search-input {
+  background: #1a1a1a !important;
+  font-size: 14px !important;
+  font-family: Open Sans, sans-serif;
+}
+
+.search-input::placeholder {
+  font-size: 14px !important;
+  font-family: Open Sans, sans-serif;
+}
+
+.email-btn {
+  display: none;
+}
+
+.asset__btn--clr {
+  background-color: #f0b90b !important;
+  color: #222222 !important;
+}
+
+.card__title a:hover {
+  color: #f0b90b !important;
+  cursor: pointer;
+}
+
+.main__load {
+  background-color: #f0b90b !important;
+  color: #222222 !important;
+}
+
+.main__load:hover {
+  background-color: transparent !important;
+  color: #f0b90b !important;
+  border: 1px solid #f0b90b;
+}
+
+.breadcrumb__item span:hover {
+  color: #f0b90b !important;
+}
+
+.breadcrumb__item span:active {
+  color: #f0b90b !important;
+}
+
+.cardAssetDetails {
+  padding-left: 60px;
+  padding-right: 40px;
+  padding-top: 10px;
+  border-radius: 15px;
+  margin-top: 30px;
+  z-index: 3;
+}
+
+.asset__item {
+  border: none !important;
+  min-height: auto !important;
+  padding-top: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 0px !important;
+  width: 100% !important;
+}
+
+.cardAssetPreview {
+  z-index: 4;
+}
+
+.imgAsset {
+  border-radius: 15px !important;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.videoAsset {
+  border-radius: 15px !important;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.asset__tabs {
+  background: #1a1a1a !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 10px !important;
+  justify-content: space-around !important;
+  border-radius: 15px;
+  border: none !important;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.asset__tabs a:before {
+  background-color: #f0b90b !important;
+}
+
+.itemActivity {
+  width: 100%;
+}
+
+.asset__author--verified:after {
+  height: 15px !important;
+  width: 15px !important;
+  bottom: 2px !important;
+}
+
+.bgCardShadow {
+  background: #1a1a1a !important;
+  border: none !important;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.sign__select {
+  margin-top: 0px !important;
+  font-size: 14px !important;
+}
+
+.main__filter-search input {
+  background: #282828 !important;
+}
+
+.author__nickname a {
+  color: #f0b90b !important;
+}
+
+.author__avatar {
+  background: #282828 !important;
+}
+
+.slider {
+  background: #282828 !important;
+}
+
+.profileForm {
+  background: #0f0f0f !important;
+  border: 0px !important;
+  box-shadow: none !important;
+}
+
+.profile__form {
+  background: #1a1a1a !important;
+}
+
+.profile__input {
+  background: #282828 !important;
+}
+
+.profile__textarea {
+  background: #282828 !important;
+}
+
+.sign__form {
+  background: #1a1a1a !important;
+  border: 0px !important;
+}
+
+.signHeadline {
+  font-family: "Inter";
+  color: #646161;
+  font-weight: 300;
+}
+
+.linkSign {
+  color: #c7114d !important;
+}
+
+.sign__input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.sign__btnPink {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #c7114d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin: 15px auto;
+}
+
+@media (min-width: 767px) {
+  .text-md-left {
+    text-align: left;
+  }
+
+  .cardAssetDetails {
+    margin-left: -35px;
+  }
+
+  .asset__img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 766px) {
+  .footer__title {
+    margin-top: 50px !important;
+  }
+
+  .footerLink {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .asset__item {
+    margin-bottom: -55px !important;
+  }
+
+  .asset__img {
+    max-width: 300px !important;
+  }
+
+  .imgAsset {
+    max-width: 300px;
+  }
+  .cardAssetDetails {
+    padding-top: 50px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .hero {
+    min-height: 10vh !important;
+  }
+
+  .overlay {
+    background-color: #00000090;
+  }
+}
+
+@media (max-width: 1199px) {
+  #connectLarge {
+    display: none;
+  }
+
+  #createLarge {
+    display: none;
+  }
+
+  .header__menu {
+    height: 300px !important;
+    background: #0f0f0f !important;
+    border-left: 0px !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    top: 65px !important;
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+
+  .header__btn:hover span {
+    background-color: #f0b90b !important;
+  }
+  .header__btn:active span {
+    background-color: #f0b90b !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #createSmall {
+    display: none;
+  }
+
+  #connectSmall {
+    display: none;
+  }
+}

@@ -1,0 +1,487 @@
+.profile {
+    display: block;
+    position: relative;
+  }
+  .profile__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 25px 0 0;
+  }
+  .profile__form {
+    background-color: #16151a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 30px 20px;
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #222227;
+  }
+  .profile__form--contacts,
+  .profile__form--profile,
+  .profile__form--create {
+    margin-top: 20px;
+    max-width: 100%;
+    padding: 20px 20px 5px;
+    align-items: flex-start;
+  }
+  .profile__form--contacts .profile__btn,
+  .profile__form--profile .profile__btn,
+  .profile__form--create .profile__btn {
+    margin: 0 0 15px;
+  }
+  .profile__form--contacts .row,
+  .profile__form--profile .row,
+  .profile__form--create .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .profile__form--contacts .col-12,
+  .profile__form--profile .col-12,
+  .profile__form--create .col-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .profile__form--profile .profile__btn {
+    margin: 5px 0 15px;
+  }
+  .profile__logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .profile__logo a {
+    max-width: 100%;
+    width: auto;
+  }
+  .profile__logo img {
+    width: auto;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .profile__title {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .profile__label {
+    font-weight: 400;
+    font-size: 14px;
+    color: #bdbdbd;
+    margin-bottom: 5px;
+    padding-left: 20px;
+  }
+  .profile__label b {
+    font-weight: 600;
+    color: #fff;
+  }
+  .profile__input {
+    background-color: #222227;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    height: 46px;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    padding: 0 20px;
+    font-family: "Inter", sans-serif;
+  }
+  .profile__input:focus {
+    border-color:  #c51458;
+  }
+  .profile__select {
+    background: url("assets/img/checkmark.svg") no-repeat center right 20px #222227;
+    background-size: 18px auto;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    height: 46px;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    padding: 0 20px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+  }
+  .css-yk16xz-control {
+      background-color: hsl(240deg 7% 14%)!important;
+      border:none!important;
+      margin-top: 3px;
+  }
+  .css-1pahdxg-control {
+      background-color: hsl(240deg 7% 14%)!important;
+      border:none!important;
+      outline: none;
+      box-shadow: none!important;
+      margin-top: 3px;
+  }
+  
+  .css-1pahdxg-control input {
+    color: white!important;
+  }
+  .css-1pahdxg-control input::placeholder {
+    color: white!important;
+  }
+  .react-select__single-value{
+    color: white!important;
+  }
+  .css-2613qy-menu {
+    background-color: #5e5e5f!important;
+  }
+  
+  .profile__select:focus {
+    border-color:  #c51458;
+  }
+  .profile__textarea {
+    background-color: #222227;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    height: 144px;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    padding: 15px 20px;
+    resize: none;
+    font-family: "Inter", sans-serif;
+  }
+  .profile__textarea:focus {
+    border-color:  #c51458;
+  }
+  .profile__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .profile__group--row .profile__label {
+    padding-left: 0;
+  }
+  .profile__group--checkbox {
+    width: 100%;
+    text-align: left;
+  }
+  .profile__group--checkbox input:not(:checked),
+  .profile__group--checkbox input:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  .profile__group--checkbox input:not(:checked) + label,
+  .profile__group--checkbox input:checked + label {
+    font-size: 14px;
+    color: #bdbdbd;
+    font-weight: normal;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    line-height: 22px;
+    margin: 0;
+  }
+  .profile__group--checkbox input:not(:checked) + label a,
+  .profile__group--checkbox input:checked + label a {
+    color:  #c51458;
+  }
+  .profile__group--checkbox input:not(:checked) + label a:hover,
+  .profile__group--checkbox input:checked + label a:hover {
+    color:  #c51458;
+    text-decoration: underline;
+  }
+  .profile__group--checkbox input:not(:checked) + label:before,
+  .profile__group--checkbox input:checked + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #222227;
+    border: 1px solid transparent;
+    border-radius: 6px;
+  }
+  .profile__group--checkbox input:not(:checked) + label:after,
+  .profile__group--checkbox input:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    transition: 0.5s ease;
+    background: url("assets/img/checkmark.svg") no-repeat center/20px auto;
+    border-radius: 6px;
+  }
+  .profile__group--checkbox input:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  .profile__group--checkbox input:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .profile__group--checkbox label::-moz-selection {
+    background: transparent;
+    color: #bdbdbd;
+  }
+  .profile__group--checkbox label::selection {
+    background: transparent;
+    color: #bdbdbd;
+  }
+  .profile__btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #c51458;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    margin: 15px auto;
+  }
+  .profile__btn:hover {
+    color:  #c51458;
+    background-color: #222227;
+  }
+  .profile__text {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  .profile__text:first-child {
+    margin-top: 0;
+  }
+  .profile__text a {
+    position: relative;
+    color:  #c51458;
+  }
+  .profile__text a:hover {
+    color:  #c51458;
+    text-decoration: underline;
+  }
+  .profile__text--small {
+    font-size: 13px;
+    line-height: 21px;
+    text-align: left;
+    color: #bdbdbd;
+  }
+  .profile__delimiter {
+    font-size: 14px;
+    color: #bdbdbd;
+    line-height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .profile__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .profile__social a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: calc(33% - 10px);
+    border-radius: 12px;
+    color: #fff;
+  }
+  .profile__social a svg {
+    height: auto;
+    fill: #fff;
+    transition: 0.5s ease;
+  }
+  .profile__social a.fb {
+    background-color: #3b5999;
+  }
+  .profile__social a.fb svg {
+    width: 10px;
+  }
+  .profile__social a.gl {
+    background-color:  #c51458
+  }
+  .profile__social a.gl svg {
+    width: 18px;
+  }
+  .profile__social a.tw {
+    background-color: #1da1f2;
+  }
+  .profile__social a.tw svg {
+    width: 20px;
+  }
+  .profile__social a:hover {
+    background-color: #bdbdbd;
+  }
+  .profile__social a:hover.fb svg {
+    fill: #3b5999;
+  }
+  .profile__social a:hover.gl svg {
+    fill:  #c51458
+  }
+  .profile__social a:hover.tw svg {
+    fill: #1da1f2;
+  }
+  .profile__value {
+    font-size: 24px;
+    color: #fff;
+    display: block;
+    font-weight: 500;
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+  }
+  .profile__radio {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 5px;
+  }
+  .profile__radio--single {
+    padding-top: 20px;
+    margin-top: 0;
+    border-top: 1px solid #222227;
+  }
+  .profile__radio li {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .profile__radio li:last-child {
+    margin-bottom: 0;
+  }
+  .profile__radio input:not(:checked),
+  .profile__radio input:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  .profile__radio label {
+    display: block;
+    margin: 0;
+    position: relative;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 16px;
+    color: #bdbdbd;
+    line-height: 24px;
+    padding-left: 32px;
+    transition: 0.5s ease;
+  }
+  .profile__radio label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 6px solid #222227;
+    background-color: transparent;
+    border-radius: 50%;
+    left: 0;
+    top: 2px;
+    transition: 0.5s ease;
+  }
+  .profile__radio label:hover {
+    color: #fff;
+  }
+  .profile__radio input:checked + label {
+    color: #fff;
+  }
+  .profile__radio input:checked + label:before {
+    border-color:  #c51458;
+  }
+  .profile__file {
+    position: relative;
+    width: 100%;
+    height: 46px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+    display: block;
+  }
+  .profile__file input {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    z-index: 1;
+  }
+  .profile__file label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    height: 46px;
+    color: #bdbdbd;
+    padding: 0 60px 0 20px;
+    background-color: #222227;
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+  .profile__file label:hover {
+    color: #fff;
+  }
+  @media (min-width: 576px) {
+    .profile__form {
+      padding: 40px;
+    }
+    .profile__form--contacts,
+    .profile__form--profile,
+    .profile__form--create {
+      padding: 20px 20px 5px;
+    }
+    .profile__logo {
+      margin-bottom: 40px;
+    }
+  }
+  @media (min-width: 768px) {
+    .profile__form--contacts,
+    .profile__form--profile,
+    .profile__form--create {
+      margin-top: 30px;
+    }
+    .profile__form--contacts .profile__btn,
+    .profile__form--profile .profile__btn,
+    .profile__form--create .profile__btn {
+      margin: 10px 0 15px;
+    }
+  }
+  @media (min-width: 992px) {
+    .profile__form--profile .profile__btn {
+      width: 160px;
+    }
+  }

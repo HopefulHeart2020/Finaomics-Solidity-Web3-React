@@ -1,0 +1,565 @@
+.sign {
+  display: block;
+  position: relative;
+}
+.sign__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 25px 0 0;
+}
+.sign__form {
+  background-color: #16151a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 30px 20px;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #222227;
+}
+
+.light .sign__form {
+  background-color: white;
+  border-color: white;
+}
+
+.sign__form--contacts,
+.sign__form--profile,
+.sign__form--create {
+  margin-top: 20px;
+  max-width: 100%;
+  padding: 20px 20px 5px;
+  align-items: flex-start;
+}
+.sign__form--contacts .sign__btn,
+.sign__form--profile .sign__btn,
+.sign__form--create .sign__btn {
+  margin: 0 0 15px;
+}
+.sign__form--contacts .row,
+.sign__form--profile .row,
+.sign__form--create .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.sign__form--contacts .col-12,
+.sign__form--profile .col-12,
+.sign__form--create .col-12 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.sign__form--profile .sign__btn__group {
+  display: flex;
+}
+.sign__form--profile .sign__btn {
+  margin: 5px 10px 15px 0;
+}
+.sign__logo {
+  display: block;
+  margin-bottom: 30px;
+}
+.sign__logo a {
+  max-width: 100%;
+  width: auto;
+}
+.sign__logo img {
+  width: auto;
+  height: 50px;
+}
+.sign__title {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+.sign__label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #bdbdbd;
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.light .sign__label {
+  color: black;
+}
+
+.light .sign__label span {
+  color: black !important;
+}
+
+.sign__label b {
+  font-weight: 600;
+}
+.sign__input {
+  background-color: #222227;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  height: 46px;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  padding: 0 20px;
+  font-family: "Inter", sans-serif;
+}
+.sign__input:focus {
+  border-color: #f0b90b;
+}
+.sign__select {
+  background: url("../assets/img/Iconionic-ios-arrow-dropdown.png") no-repeat
+    center right 20px #222227;
+  background-size: 18px auto;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  height: 46px;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+.css-yk16xz-control {
+  background-color: hsl(240deg 7% 14%) !important;
+  border: none !important;
+  margin-top: 3px;
+}
+.css-1pahdxg-control {
+  background-color: hsl(240deg 7% 14%) !important;
+  border: none !important;
+  outline: none;
+  box-shadow: none !important;
+  margin-top: 3px;
+}
+
+.css-1pahdxg-control input {
+  color: white !important;
+}
+.css-1pahdxg-control input::placeholder {
+  color: white !important;
+}
+.react-select__single-value {
+  color: white !important;
+}
+.css-2613qy-menu {
+  background-color: #5e5e5f !important;
+}
+
+.sign__select:focus {
+  border-color: #f0b90b;
+}
+.sign__textarea {
+  background-color: #222227;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  height: 144px;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  padding: 15px 20px;
+  resize: none;
+  font-family: "Inter", sans-serif;
+}
+.sign__textarea:focus {
+  border-color: #f0b90b;
+}
+.sign__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.sign__group--row .sign__label {
+  padding-left: 0;
+}
+.sign__group--checkbox {
+  width: 100%;
+  text-align: left;
+}
+.sign__group--checkbox input:not(:checked),
+.sign__group--checkbox input:checked {
+  position: absolute;
+  left: -9999px;
+}
+.sign__group--checkbox input:not(:checked) + label,
+.sign__group--checkbox input:checked + label {
+  font-size: 14px;
+  color: #bdbdbd;
+  font-weight: normal;
+  position: relative;
+  cursor: pointer;
+  padding-left: 35px;
+  line-height: 22px;
+  margin: 0;
+}
+.sign__group--checkbox input:not(:checked) + label a,
+.sign__group--checkbox input:checked + label a {
+  color: #3772ff;
+}
+.sign__group--checkbox input:not(:checked) + label a:hover,
+.sign__group--checkbox input:checked + label a:hover {
+  color: #3772ff;
+  text-decoration: underline;
+}
+.sign__group--checkbox input:not(:checked) + label:before,
+.sign__group--checkbox input:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #222227;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+.sign__group--checkbox input:not(:checked) + label:after,
+.sign__group--checkbox input:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  transition: 0.5s ease;
+  background: url("assets/img/checkmark.svg") no-repeat center/20px auto;
+  border-radius: 6px;
+}
+.sign__group--checkbox input:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.sign__group--checkbox input:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.sign__group--checkbox label::-moz-selection {
+  background: transparent;
+  color: #bdbdbd;
+}
+.sign__group--checkbox label::selection {
+  background: transparent;
+  color: #bdbdbd;
+}
+.sign__btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #3772ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin: 15px auto;
+}
+.sign__btn:hover:not(:disabled) {
+  color: #3772ff;
+  background-color: #222227;
+}
+.sign__btn:disabled {
+  background-color: rgba(100, 100, 100, 0.3);
+  cursor: not-allowed;
+}
+.sign__btn--cancel {
+  background-color: #222227;
+  color: #fff;
+}
+.sign__avatar {
+  display: flex;
+  margin: 0 auto;
+  z-index: 10;
+}
+.sign__cover img {
+  width: 100%;
+  height: 100px;
+  margin-bottom: -50px;
+}
+.sign__avatar img {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.sign__text {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+  text-align: center;
+}
+.sign__text:first-child {
+  margin-top: 0;
+}
+.sign__text a {
+  position: relative;
+  color: #3772ff;
+}
+.sign__text a:hover {
+  color: #3772ff;
+  text-decoration: underline;
+}
+.sign__text--small {
+  font-size: 13px;
+  line-height: 21px;
+  text-align: left;
+  color: #bdbdbd;
+}
+.sign__delimiter {
+  font-size: 14px;
+  color: #bdbdbd;
+  line-height: 100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.sign__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.sign__social a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  width: calc(33% - 10px);
+  border-radius: 12px;
+  color: #fff;
+}
+.sign__social a svg {
+  height: auto;
+  fill: #fff;
+  transition: 0.5s ease;
+}
+.sign__social a.fb {
+  background-color: #3b5999;
+}
+.sign__social a.fb svg {
+  width: 10px;
+}
+.sign__social a.gl {
+  background-color: #3772ff;
+}
+.sign__social a.gl svg {
+  width: 18px;
+}
+.sign__social a.tw {
+  background-color: #1da1f2;
+}
+.sign__social a.tw svg {
+  width: 20px;
+}
+.sign__social a:hover {
+  background-color: #bdbdbd;
+}
+.sign__social a:hover.fb svg {
+  fill: #3b5999;
+}
+.sign__social a:hover.gl svg {
+  fill: #3772ff;
+}
+.sign__social a:hover.tw svg {
+  fill: #1da1f2;
+}
+.sign__value {
+  font-size: 24px;
+  color: #fff;
+  display: block;
+  font-weight: 500;
+  margin-left: 10px;
+  font-family: "Inter", sans-serif;
+}
+.sign__radio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 5px;
+}
+.sign__radio--single {
+  padding-top: 20px;
+  margin-top: 0;
+  border-top: 1px solid #222227;
+}
+.sign__radio li {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.sign__radio li:last-child {
+  margin-bottom: 0;
+}
+.sign__radio input:not(:checked),
+.sign__radio input:checked {
+  position: absolute;
+  left: -9999px;
+}
+.sign__radio label {
+  display: block;
+  margin: 0;
+  position: relative;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 16px;
+  color: #bdbdbd;
+  line-height: 24px;
+  padding-left: 32px;
+  transition: 0.5s ease;
+}
+.sign__radio label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 6px solid #222227;
+  background-color: transparent;
+  border-radius: 50%;
+  left: 0;
+  top: 2px;
+  transition: 0.5s ease;
+}
+.sign__radio label:hover {
+  color: #fff;
+}
+.sign__radio input:checked + label {
+  color: #fff;
+}
+.sign__radio input:checked + label:before {
+  border-color: #3772ff;
+}
+.sign__file {
+  position: relative;
+  width: 100%;
+  height: 46px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+  display: block;
+}
+.sign__file input {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  z-index: 1;
+}
+.sign__file label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 46px;
+  color: #bdbdbd;
+  padding: 0 60px 0 20px;
+  background-color: #222227;
+  margin: 0;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+.sign__file label:hover {
+  color: #fff;
+}
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 30px;
+  margin: auto;
+}
+.example-thumb {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  background: #ffffff;
+  border: 5px solid #3774ff;
+  border-radius: 100%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+}
+.example-thumb.active {
+  background-color: grey;
+}
+.example-track {
+  position: relative;
+  background: #ddd;
+}
+.example-track.example-track-0 {
+  background: #83a9ff;
+}
+.horizontal-slider .example-track {
+  top: 20px;
+  height: 4px;
+}
+.horizontal-slider .example-thumb {
+  top: 17px;
+  width: 10px;
+  outline: none;
+  height: 10px;
+  line-height: 38px;
+}
+@media (min-width: 576px) {
+  .sign__form {
+    padding: 40px;
+  }
+  .sign__form--contacts,
+  .sign__form--profile,
+  .sign__form--create {
+    padding: 20px 20px 5px;
+  }
+  .sign__logo {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .sign__form--contacts,
+  .sign__form--profile,
+  .sign__form--create {
+    margin-top: 30px;
+  }
+  .sign__form--contacts .sign__btn,
+  .sign__form--profile .sign__btn,
+  .sign__form--create .sign__btn {
+    margin: 10px 10px 15px 0;
+  }
+}
+@media (min-width: 992px) {
+  .sign__form--profile .sign__btn {
+    width: 160px;
+  }
+}

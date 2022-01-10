@@ -1,0 +1,14 @@
+.nftdropzone {
+  width: 100%;
+  border: 2px dashed rgb(94, 93, 93);
+  border-radius: 5px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+}
+.pt-3{
+  padding-bottom: 10px;
+}

@@ -1,0 +1,22 @@
+diff a/contracts/Marketplace.sol b/contracts/Marketplace.sol	(rejected hunks)
+@@ -256,13 +256,16 @@
+             royaltyMap[newTokenId] = _royalty;
+             creatorMap[newTokenId] = _creator;
+             require(address(msg.sender).balance >= price[newTokenId], "Error, the amount is lower");
++            require (msg.value == price[newTokenId], "msg.value should be equal to the buyAmount");
+             // 2.5% commission cut
+             uint256 _commissionValue = price[newTokenId].mul(75).div(1000);
+             uint256 _royaltyValue = price[newTokenId].mul(royaltyMap[newTokenId]).div(100);
+-            uint256 _sellerValue = price[newTokenId].sub(_commissionValue).sub(_royaltyValue);
+-            transferKCSOrWKCS(payable(_creator), _sellerValue);
+-            transferKCSOrWKCS(payable(creatorMap[newTokenId]), _royaltyValue);
+-            transferKCSOrWKCS(payable(adminRecoveryAddress), _commissionValue);
++            uint256 _sellerValue = price[newTokenId].sub(_commissionValue + _royaltyValue);
++            
++            payable(_creator).transfer(_sellerValue);
++            payable(creatorMap[newTokenId]).transfer(_royaltyValue);
++            payable(adminRecoveryAddress).transfer(_commissionValue);
++
+             NFTsRealm(nftContract).mint(newTokenId, msg.sender, _tokenUri);
+             openTrade(newTokenId, _price);
+             emit Purchase(_creator, msg.sender, price[newTokenId], newTokenId);

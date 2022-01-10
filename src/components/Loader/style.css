@@ -1,0 +1,8 @@
+.loader {
+  display: block;
+  width: 100%;
+}
+.loader img {
+  display: block;
+  margin: 0 auto;
+}

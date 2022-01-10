@@ -1,0 +1,123 @@
+.search-content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.search-bar {
+  padding-bottom: 37px;
+  border-bottom: 2px solid #767d8f;
+}
+.search-outline {
+  width: 303px;
+  height: 50px;
+  padding: 10px 5px;
+  padding-left: 10px;
+  border: 2px solid #767d8f;
+  border-radius: 15px;
+}
+.email-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #3772ff;
+}
+.search-input {
+  border: none;
+  outline: none;
+  width: 270px;
+  background-color: #141416;
+  color: white;
+}
+
+.light .search-input {
+  background-color: white;
+  color: black;
+}
+
+.search-input::placeholder {
+  color: #767d8f !important;
+  font: Montserrat;
+  opacity: 1 !important;
+}
+.range__label {
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #b1b5c3;
+}
+
+.light .range__label {
+  color: black;
+}
+
+.explore__select {
+  background: url("../assets/img/Iconionic-ios-arrow-dropdown.png") no-repeat
+    center right 20px #222227;
+  background-size: 18px auto;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  height: 46px;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  padding: 0 20px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+.reset {
+  font-size: 15px;
+  font-weight: 700;
+  color: #b1b5c3;
+  border-top: 1px solid #767d8f;
+  padding-top: 20px;
+}
+.reset:hover {
+  color: #3772ff;
+}
+​.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  background: white;
+  outline: none;
+  opacity: 0.7;
+  border-radius: 8px;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.light .slider {
+  background: black;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 13px;
+  background: #3772ff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04aa6d;
+  cursor: pointer;
+}
